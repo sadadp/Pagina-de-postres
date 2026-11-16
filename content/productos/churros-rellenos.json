@@ -1,0 +1,11 @@
+{
+  "nombre": "Churros rellenos",
+  "descripcion": "4 piezas, cajeta",
+  "precio": 70,
+  "categoria": "calientes",
+  "sabor": "cajeta",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 40
+}

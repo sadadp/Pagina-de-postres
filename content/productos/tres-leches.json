@@ -1,0 +1,11 @@
+{
+  "nombre": "Tres leches",
+  "descripcion": "Chico, 8 personas",
+  "precio": 380,
+  "categoria": "pasteles",
+  "sabor": "leche",
+  "foto": "",
+  "anticipacion": 2,
+  "agotado": false,
+  "orden": 110
+}

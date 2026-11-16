@@ -1,0 +1,11 @@
+{
+  "nombre": "Concha",
+  "descripcion": "Vainilla",
+  "precio": 18,
+  "categoria": "pan",
+  "sabor": "glaseado",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 50
+}

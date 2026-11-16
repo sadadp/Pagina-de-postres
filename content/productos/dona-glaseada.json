@@ -1,0 +1,11 @@
+{
+  "nombre": "Dona glaseada",
+  "descripcion": "Pieza",
+  "precio": 28,
+  "categoria": "donas-galletas",
+  "sabor": "leche",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 80
+}

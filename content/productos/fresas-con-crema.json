@@ -1,0 +1,11 @@
+{
+  "nombre": "Fresas con crema",
+  "descripcion": "Vaso individual",
+  "precio": 65,
+  "categoria": "vaso",
+  "sabor": "fresa",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 150
+}

@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+.wrangler/
+.env*
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.impeccable/
+
+# Panel de administración: se copia desde node_modules al compilar
+public/admin/sveltia-cms.js
+public/admin/chunks/

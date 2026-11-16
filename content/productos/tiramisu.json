@@ -1,0 +1,11 @@
+{
+  "nombre": "Tiramisú",
+  "descripcion": "Vaso individual",
+  "precio": 75,
+  "categoria": "vaso",
+  "sabor": "cafe",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 160
+}

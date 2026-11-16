@@ -1,0 +1,11 @@
+{
+  "nombre": "Galleta de chispas",
+  "descripcion": "Pieza grande",
+  "precio": 25,
+  "categoria": "donas-galletas",
+  "sabor": "cafe",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 100
+}
