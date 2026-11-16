@@ -1,9 +1,9 @@
 {
-  "nombre": "Churros rellenos",
-  "descripcion": "4 piezas, cajeta",
-  "precio": 70,
+  "nombre": "Roles De canela",
+  "descripcion": "1 pieza",
+  "precio": 45,
   "categoria": "calientes",
-  "sabor": "cajeta",
+  "sabor": "canela",
   "foto": "",
   "anticipacion": 1,
   "agotado": false,
