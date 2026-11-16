@@ -1,0 +1,11 @@
+{
+  "nombre": "Panqué de naranja",
+  "descripcion": "Entero, 8 rebanadas",
+  "precio": 160,
+  "categoria": "pan",
+  "sabor": "naranja",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 70
+}

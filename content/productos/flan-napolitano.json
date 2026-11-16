@@ -1,0 +1,11 @@
+{
+  "nombre": "Flan napolitano",
+  "descripcion": "Vaso individual",
+  "precio": 40,
+  "categoria": "vaso",
+  "sabor": "cajeta",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 140
+}

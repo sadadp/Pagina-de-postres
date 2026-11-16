@@ -1,0 +1,29 @@
+{
+  "categorias": [
+    {
+      "id": "calientes",
+      "nombre": "Calientes",
+      "nota": "Salen del horno el día de tu entrega."
+    },
+    {
+      "id": "pan",
+      "nombre": "Pan",
+      "nota": ""
+    },
+    {
+      "id": "donas-galletas",
+      "nombre": "Donas y galletas",
+      "nota": ""
+    },
+    {
+      "id": "pasteles",
+      "nombre": "Pasteles y pays",
+      "nota": "Pídelos con 2 días de anticipación."
+    },
+    {
+      "id": "vaso",
+      "nombre": "Postres en vaso",
+      "nota": ""
+    }
+  ]
+}

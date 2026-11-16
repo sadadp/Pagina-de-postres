@@ -1,0 +1,11 @@
+{
+  "nombre": "Rol de canela",
+  "descripcion": "Canela y glaseado de queso crema",
+  "precio": 45,
+  "categoria": "calientes",
+  "sabor": "canela",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 10
+}

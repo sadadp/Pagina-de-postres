@@ -1,0 +1,11 @@
+{
+  "nombre": "Cheesecake de zarzamora",
+  "descripcion": "Chico, 8 personas",
+  "precio": 420,
+  "categoria": "pasteles",
+  "sabor": "zarzamora",
+  "foto": "",
+  "anticipacion": 2,
+  "agotado": false,
+  "orden": 130
+}

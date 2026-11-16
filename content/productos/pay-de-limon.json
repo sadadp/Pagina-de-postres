@@ -1,0 +1,11 @@
+{
+  "nombre": "Pay de limón",
+  "descripcion": "Entero, 8 personas",
+  "precio": 290,
+  "categoria": "pasteles",
+  "sabor": "limon",
+  "foto": "",
+  "anticipacion": 2,
+  "agotado": false,
+  "orden": 120
+}

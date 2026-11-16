@@ -1,0 +1,11 @@
+{
+  "nombre": "Dona de chocolate",
+  "descripcion": "Pieza",
+  "precio": 30,
+  "categoria": "donas-galletas",
+  "sabor": "chocolate",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 90
+}

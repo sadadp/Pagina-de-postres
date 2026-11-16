@@ -1,0 +1,11 @@
+{
+  "nombre": "Rol con nuez",
+  "descripcion": "Nuez tostada y caramelo",
+  "precio": 55,
+  "categoria": "calientes",
+  "sabor": "nuez",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 20
+}

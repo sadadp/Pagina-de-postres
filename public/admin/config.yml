@@ -1,0 +1,170 @@
+# Panel de administración de Canelia (Sveltia CMS).
+# Cada cambio que guardas aquí se escribe en el repositorio de GitHub y la
+# página se vuelve a publicar sola en un par de minutos.
+
+backend:
+  name: github
+  repo: sadadp/Pagina-de-postres
+  branch: main
+  commit_messages:
+    create: 'Menú: agrega {{slug}}'
+    update: 'Menú: actualiza {{slug}}'
+    delete: 'Menú: quita {{slug}}'
+    uploadMedia: 'Fotos: sube {{path}}'
+    deleteMedia: 'Fotos: quita {{path}}'
+
+media_folder: public/fotos
+public_folder: /fotos
+
+# Las fotos que subes se achican y se convierten a WebP solas, para que la
+# página cargue rápido aunque vengan directo del celular.
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1400
+          height: 1600
+  stock_assets: false
+
+collections:
+  - name: productos
+    label: Productos
+    label_singular: producto
+    description: Lo que aparece en el menú. Un producto sin foto se muestra como una ficha del color de su sabor.
+    folder: content/productos
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: nombre
+    slug: '{{nombre}}'
+    summary: '{{nombre}}: ${{precio}}'
+    sortable_fields: [orden, nombre, precio]
+    fields:
+      - { name: nombre, label: Nombre, widget: string }
+      - name: descripcion
+        label: Descripción corta
+        widget: string
+        required: false
+        hint: 'Una línea. Ej.: "6 piezas, azúcar y canela".'
+      - name: precio
+        label: Precio
+        widget: number
+        value_type: int
+        min: 0
+        hint: En pesos, sin signo ni centavos.
+      - name: categoria
+        label: Categoría
+        widget: relation
+        collection: ajustes
+        file: categorias
+        value_field: categorias.*.id
+        display_fields: [categorias.*.nombre]
+        search_fields: [categorias.*.nombre]
+      - name: sabor
+        label: Sabor (color de la ficha)
+        widget: select
+        default: canela
+        hint: Es el color que se ve mientras el producto no tiene foto.
+        options:
+          - { label: Canela, value: canela }
+          - { label: Cajeta, value: cajeta }
+          - { label: Chocolate, value: chocolate }
+          - { label: Nuez, value: nuez }
+          - { label: Café, value: cafe }
+          - { label: Vainilla, value: vainilla }
+          - { label: Elote, value: elote }
+          - { label: Naranja, value: naranja }
+          - { label: Limón, value: limon }
+          - { label: Fresa, value: fresa }
+          - { label: Glaseado rosa, value: glaseado }
+          - { label: Zarzamora, value: zarzamora }
+          - { label: Leche o crema, value: leche }
+      - name: foto
+        label: Foto
+        widget: image
+        required: false
+        hint: Opcional. Vertical o cuadrada, con el postre al centro. Al subirla sustituye a la ficha de color.
+      - name: anticipacion
+        label: Días de anticipación
+        widget: number
+        value_type: int
+        min: 0
+        default: 1
+        hint: Cuántos días antes hay que pedirlo. 0 significa que se puede pedir para hoy.
+      - name: agotado
+        label: Agotado
+        widget: boolean
+        default: false
+        hint: Se sigue viendo en el menú, pero no se puede agregar al pedido.
+      - name: orden
+        label: Orden
+        widget: number
+        value_type: int
+        default: 100
+        hint: Dentro de su categoría, los números más chicos salen primero.
+
+  - name: ajustes
+    label: Ajustes
+    files:
+      - name: negocio
+        label: Datos del negocio
+        file: content/ajustes.json
+        fields:
+          - name: whatsapp
+            label: WhatsApp para recibir pedidos
+            widget: string
+            required: false
+            hint: Tu número a 10 dígitos, sin espacios. Sin este número los pedidos no se pueden enviar.
+          - { name: ciudad, label: Ciudad o zona, widget: string, required: false }
+          - { name: portada_titulo, label: Título de la portada, widget: string }
+          - { name: portada_texto, label: Texto de la portada, widget: text, required: false }
+          - name: envio_nota
+            label: Nota sobre el envío
+            widget: text
+            required: false
+            hint: Aparece junto al total del pedido y en "Cómo pedir".
+          - { name: banco, label: Banco, widget: string, required: false }
+          - { name: titular, label: Nombre del titular de la cuenta, widget: string, required: false }
+          - name: clabe
+            label: CLABE
+            widget: string
+            required: false
+            pattern: ['^(\d{18})?$', 'La CLABE lleva 18 dígitos, sin espacios.']
+            hint: Si la dejas vacía, la app dice que los datos de transferencia se mandan por WhatsApp.
+          - name: instagram
+            label: Usuario de Instagram
+            widget: string
+            required: false
+            hint: Sin la arroba.
+          - name: sitio_url
+            label: Dirección de la página
+            widget: string
+            required: false
+            hint: 'Ej.: https://canelia.tu-cuenta.workers.dev. Sirve para que el enlace se vea con imagen al compartirlo.'
+      - name: categorias
+        label: Categorías
+        file: content/categorias.json
+        fields:
+          - name: categorias
+            label: Categorías
+            label_singular: categoría
+            widget: list
+            summary: '{{nombre}}'
+            hint: Salen en el menú en este orden.
+            fields:
+              - name: id
+                label: Identificador
+                widget: string
+                pattern: ['^[a-z0-9-]+$', 'Solo minúsculas, números y guiones. Ej.: postres-en-vaso']
+                hint: Interno. Ponlo una vez y no lo cambies, porque los productos apuntan a él.
+              - { name: nombre, label: Nombre, widget: string }
+              - name: nota
+                label: Nota
+                widget: string
+                required: false
+                hint: 'Opcional. Ej.: "Pídelos con 2 días de anticipación."'

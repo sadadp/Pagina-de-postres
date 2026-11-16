@@ -1,0 +1,11 @@
+{
+  "nombre": "Pan de elote",
+  "descripcion": "Rebanada",
+  "precio": 35,
+  "categoria": "pan",
+  "sabor": "elote",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 60
+}

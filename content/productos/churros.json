@@ -1,0 +1,11 @@
+{
+  "nombre": "Churros",
+  "descripcion": "6 piezas, azúcar y canela",
+  "precio": 60,
+  "categoria": "calientes",
+  "sabor": "vainilla",
+  "foto": "",
+  "anticipacion": 1,
+  "agotado": false,
+  "orden": 30
+}
